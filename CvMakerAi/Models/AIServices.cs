@@ -18,7 +18,7 @@ namespace CvMakerAi.Models
         {
             _httpClient = httpClient;
             _httpClient.DefaultRequestHeaders.Authorization =
-                new AuthenticationHeaderValue("Bearer", "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");
+                new AuthenticationHeaderValue("Bearer", "GPT TOKEN");
         }
 
         public async Task<CVModel> ProcessCvFormWithAI(CVModel model)
