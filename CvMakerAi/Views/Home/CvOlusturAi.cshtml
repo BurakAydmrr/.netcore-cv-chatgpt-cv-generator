@@ -1,0 +1,25 @@
+@{
+    Layout = null;
+    ViewBag.Title = "CV Oluştur";
+}
+
+<h2>CV Bilgisi Gir</h2>
+
+<form method="post" action="/test">
+    <textarea name="input" rows="8" cols="60" placeholder="CV bilgilerini buraya gir..."></textarea>
+    <br />
+    <button type="submit">Gönder</button>
+</form>
+
+@if (ViewBag.AIResponse != null)
+{
+    <h3>Düzenlenmiş CV:</h3>
+    <p>@ViewBag.AIResponse</p>
+}
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <div style="color: red;">
+        <strong>@ViewBag.ErrorMessage</strong>
+    </div>
+}

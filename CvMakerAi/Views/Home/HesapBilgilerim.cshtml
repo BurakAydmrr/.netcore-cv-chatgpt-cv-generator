@@ -1,0 +1,214 @@
+@{
+   
+    var cv = ViewBag.UserCv; // bu satýrda CVModel nesnesi gelmeli
+}
+
+<section class="page-banner" style="background-image: url(https://bausem.bau.edu.tr/upload/yapayzeka-banner.png);">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="banner-title">CV Bilgilerim</h2>
+                <p class="breadcrumbs"><a href="/">Anasayfa</a> - CV Bilgilerim</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="container my-5">
+    <h2 class="mb-4">CV Bilgilerim</h2>
+
+
+
+    <div class="container">
+
+
+<div class="accordion" id="accordionExample">
+    <form action="/cv-olustur" method="post">
+
+        <!-- Eðitim Bilgileri -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">
+                    Eðitim Bilgileri
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="education-item mb-4">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label>Okul Adý*</label>
+                                <input type="text" class="form-control" name="OkulAdi" placeholder="Okul Adý" required value="@ViewBag.OkulAdi" />
+                                </div>
+                            <div class="col-md-6">
+                                <label>Derece*</label>
+                                        <input type="text" class="form-control" name="Derece" placeholder="Derece" required value="@ViewBag.Derece" />
+                                    </div>
+                            <div class="col-md-6">
+                                <label>Þehir</label>
+                                      <input type="text" class="form-control" name="SehirEgitim" placeholder="Þehir" value="@ViewBag.SehirEgitim" />
+                                    </div>
+                            <div class="col-md-3">
+                                <label>Baþlangýç</label>
+                                        <input type="text" class="form-control" name="Baslangic" placeholder="Baþlangýç" value="@ViewBag.Baslangic" />
+                                    </div>
+                            <div class="col-md-3">
+                                <label>Bitiþ</label>
+                                        <input type="text" class="form-control" name="Bitis" placeholder="Bitiþ" value="@ViewBag.Bitis" />
+                                    </div>
+                            <div class="col-12">
+                                <label>Açýklama</label>
+                        <textarea class="form-control" name="AciklamaEgitim" style="height: 100px">@ViewBag.AciklamaEgitim</textarea>
+                                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kiþisel Bilgiler -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                    Kiþisel Bilgiler
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label>Ýsim*</label>
+                                    <input type="text" class="form-control" name="Isim" required value="@ViewBag.Isim" />
+                                </div>
+                        <div class="col-md-6">
+                            <label>Soyisim*</label>
+                                    <input type="text" class="form-control" name="Soyisim" required value="@ViewBag.Soyisim" />
+                                </div>
+                        <div class="col-md-6">
+                            <label>E-posta*</label>
+                                    <input type="email" class="form-control" name="Email" required value="@ViewBag.Email" />
+                                </div>
+                        <div class="col-md-6">
+                            <label>Telefon</label>
+                                    <input type="tel" class="form-control" name="Telefon" value="@ViewBag.Telefon" />
+                                </div>
+                        <div class="col-12">
+                            <label>Adres</label>
+                                    <input type="text" class="form-control" name="Adres" value="@ViewBag.Adres" />
+                                </div>
+                        <div class="col-12">
+                            <label>Cinsiyet</label>
+                           <select class="form-control" name="Cinsiyet">
+  
+                    </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label>Doðum Tarihi</label>
+                                    <input type="text" class="form-control" name="DogumTarihi" value="@ViewBag.DogumTarihi" />
+                                </div>
+                        <div class="col-md-6">
+                            <label>Þehir</label>
+                                    <input type="text" class="form-control" name="Sehir" value="@ViewBag.Sehir" />
+                                </div>
+                        <div class="col-12">
+                            <label>Kendinden Bahset</label>
+                                    <input type="text" class="form-control" name="Aciklama" value="@ViewBag.Aciklama" />
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Deneyimler -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                    Deneyimler
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="experience-item mb-4">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label>Þirket Adý*</label>
+                                        <input type="text" class="form-control" name="Sirket" required value="@ViewBag.Sirket" />
+                                    </div>
+                            <div class="col-md-6">
+                                <label>Pozisyon*</label>
+                                        <input type="text" class="form-control" name="Pozisyon" required value="@ViewBag.Pozisyon" />
+                                    </div>
+                            <div class="col-12">
+                                <label>Süre</label>
+                                        <input type="text" class="form-control" name="Sure" value="@ViewBag.Sure" />
+                                    </div>
+                            <div class="col-12">
+                                <label>Ýþ Açýklama</label>
+                                        <input type="text" class="form-control" name="IsAciklama" value="@ViewBag.IsAciklama" />
+                                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sertifikalar -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                    Sertifikalar
+                </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="certificate-item mb-4">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label>Sertifika Adý*</label>
+                                        <input type="text" class="form-control" name="SertifikaAdi" required value="@ViewBag.SertifikaAdi" />
+                                    </div>
+                            <div class="col-md-6">
+                                <label>Kurum*</label>
+                                        <input type="text" class="form-control" name="SertifikaKurum" required value="@ViewBag.SertifikaKurum" />
+                                    </div>
+                            <div class="col-12">
+                                <label>Açýklama</label>
+                        <textarea class="form-control" name="AciklamaSertifika" style="height: 100px">@ViewBag.AciklamaSertifika</textarea>
+                                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Submit Butonu -->
+        <div class="text-end mt-4">
+            <button type="submit" class="btn btn-primary">Kaydet</button>
+        </div>
+
+                
+
+    </form>
+
+
+
+
+            <!-- PDF Oluþturma Butonu -->
+            <form action="/cv-pdf-olustur" method="post" class="mt-3">
+                <button type="submit" class="btn btn-outline-danger">PDF Olarak Ýndir</button>
+            </form>
+</div>
+
+    
+
+</div>
+
+
+
+
+
+
+
+
+</div>

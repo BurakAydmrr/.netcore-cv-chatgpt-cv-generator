@@ -1,0 +1,61 @@
+//
+// variables.scss
+//
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+
+$primary:   #006fff;
+$success:   #1fafa5;
+$info:      #0488d6;
+$warning:   #ffc107;
+$danger:    #f55339;
+$orange:    #f0e9dd;
+$purple:    #8871f3;
+$cyan:      #26b3c1;
+$blue:      #4763cb;
+$pink:      #f85f89;
+$white:     #ffffff;
+$dark:      #2d2c2c;
+$light:     #e3e8ee;
+$muted:     #a1a1a1;
+
+// stylelint-disable
+$gray-100: #f8f9fa;
+$gray-200: #f6f7fb;
+$gray-300: #efefef;
+$gray-400: #e6effe;
+$gray-500: #dee3e7;
+$gray-600: #74788d;
+$gray-700: #262626;
+$gray-800: #2d2d2d;
+$gray-900: #1d262d;
+
+$colors: (
+    "primary": $primary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "orange": $orange,
+    "dark": $dark,
+    "cyan": $cyan,
+    "blue": $blue,
+    "muted": $muted,
+    "purple": $purple,
+    "pink": $pink,
+    "white": $white,
+    "light": $light
+);
+
+
+// Body Background
+$body-bg:                   #f5f5f5;
+$bg-gradient:               linear-gradient(to right, $blue, $primary);
+$box-shadow:                 0 0 20px rgba(230, 230, 230 , 0.8);
+
+// Base font
+$font-size-base:            14px;
+
+$font-family-base:          'Nunito', sans-serif;
+$font-family-secondary:     'Nunito', sans-serif;

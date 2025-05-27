@@ -1,0 +1,42 @@
+//
+// responsive.scss
+//
+
+
+@media (max-width: 1024px){
+    .bg-login{
+        img{
+            height: 100vh;
+            width: 100%;
+        }
+    }
+    .auth-box{
+        padding: 40px 60px;
+    }
+}
+
+// Demo 3
+
+@media (min-width: 200px) and (max-width: 1024px) {
+    .authen-box{
+      left: 0px;
+      margin: 35px;
+      .auth-content{
+        margin: 20px;
+      }
+    }
+  }
+
+  @media (max-width:992px){
+    .authen-box{
+      margin: 40px !important;
+    }
+  }
+  
+  @media (max-width: 425px) {
+    .authen-box{
+      .auth-content{
+        margin: 8px;
+      }
+    }
+  }

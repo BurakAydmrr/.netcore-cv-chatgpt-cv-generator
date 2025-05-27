@@ -1,0 +1,579 @@
+@{
+    ViewData["Title"] = "CV Oluştur";
+}
+
+<section class="page-banner" style="background-image: url(https://bausem.bau.edu.tr/upload/yapayzeka-banner.png);">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="banner-title">CV Oluştur</h2>
+                <p class="breadcrumbs"><a href="/">Anasayfa</a> - Cv Oluştur</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container py-5">
+    <!-- Progress Steps -->
+    <div class="progress-steps mb-5">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="step active" data-step="1">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Kişisel Bilgiler</div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="step" data-step="2">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Eğitim</div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="step" data-step="3">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Deneyimler</div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="step" data-step="4">
+                    <div class="step-number">4</div>
+                    <div class="step-title">Sertifikalar</div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="step" data-step="5">
+                    <div class="step-number">5</div>
+                    <div class="step-title">Şablon</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form Card -->
+    <div class="card shadow-sm">
+        <div class="card-body p-4">
+
+            <form method="post" action="/cv-olustur">
+                <!-- Step 1: Personal Information -->
+                <div class="form-step" data-step="1">
+                    <h5 class="card-title mb-4">
+                        <i class="fas fa-user-circle me-2"></i>Kişisel Bilgiler
+                    </h5>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="isim" name="isim" placeholder="İsim" required>
+                                <label for="isim">İsim*</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="soyisim" name="soyisim" placeholder="Soyisim" required>
+                                <label for="soyisim">Soyisim*</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="email" class="form-control" id="email" name="e_posta" placeholder="E-posta" required>
+                                <label for="email">E-posta Adresi*</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="tel" class="form-control" id="telefon" name="telefon" placeholder="Telefon">
+                                <label for="telefon">Telefon Numarası</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="adres" name="adres" placeholder="Adres">
+                                <label for="adres">Adres</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <select class="form-select" id="cinsiyet" name="cinsiyet" aria-label="Cinsiyet">
+                                    <option value="" selected>Seçiniz</option>
+                                    <option value="Erkek">Erkek</option>
+                                    <option value="Kadın">Kadın</option>
+                                </select>
+                                <label for="cinsiyet">Cinsiyet</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="dogumTarihi" name="dogumTarihi" placeholder="Doğum Tarihi">
+                                <label for="dogumTarihi">Doğum Tarihi</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="sehir" name="Sehir" placeholder="Şehir/İlçe">
+                                <label for="sehir">Şehir/İlçe</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="aciklama" name="Aciklama" placeholder="Kendinden Bahset Açıklama">
+                                <label for="aciklama">Kendinden Bahset Açıklama</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Education -->
+                <div class="form-step" data-step="2" style="display: none;">
+                    <h5 class="card-title mb-4">
+                        <i class="fas fa-graduation-cap me-2"></i>Eğitim Bilgileri
+                    </h5>
+                    <div id="educationContainer">
+                        <div class="education-item mb-4">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" name="OkulAdi" placeholder="Okul Adı" required>
+                                        <label>Okul Adı*</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" name="Derece" placeholder="Derece" required>
+                                        <label>Derece*</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" name="SehirEgitim" placeholder="Şehir">
+                                        <label>Şehir</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" name="Baslangic" placeholder="Başlangıç">
+                                        <label>Başlangıç</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" name="Bitis" placeholder="Bitiş">
+                                        <label>Bitiş</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" name="AciklamaEgitim" placeholder="Açıklama" style="height: 100px"></textarea>
+                                        <label>Açıklama</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-outline-primary btn-sm mb-3" id="addEducation">
+                        <i class="fas fa-plus me-2"></i>Eğitim Ekle
+                    </button>
+                </div>
+
+                <!-- Step 3: Experience -->
+                <div class="form-step" data-step="3" style="display: none;">
+                    <h5 class="card-title mb-4">
+                        <i class="fas fa-briefcase me-2"></i>İş Deneyimleri
+                    </h5>
+                    <div id="experienceContainer">
+                        <div class="experience-item mb-4">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" name="Sirket" placeholder="Şirket Adı" required>
+                                        <label>Şirket Adı*</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" name="Pozisyon" placeholder="Pozisyon" required>
+                                        <label>Pozisyon*</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" name="Sure" placeholder="Süre">
+                                        <label>Süre</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" name="isAciklama" placeholder="İş Açıklama">
+                                        <label>İş Açıklama</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-outline-primary btn-sm mb-3" id="addExperience">
+                        <i class="fas fa-plus me-2"></i>Deneyim Ekle
+                    </button>
+                </div>
+
+                <!-- Step 4: Certificates -->
+                <div class="form-step" data-step="4" style="display: none;">
+                    <h5 class="card-title mb-4">
+                        <i class="fas fa-certificate me-2"></i>Sertifikalar
+                    </h5>
+                    <div id="certificateContainer">
+                        <div class="certificate-item mb-4">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" name="SertifikaAdi" placeholder="Sertifika Adı" required>
+                                        <label>Sertifika Adı*</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" name="SertifikaKurum" placeholder="Kurum" required>
+                                        <label>Kurum*</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" name="AciklamaSertifika" placeholder="Açıklama" style="height: 100px"></textarea>
+                                        <label>Açıklama</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-outline-primary btn-sm mb-3" id="addCertificate">
+                        <i class="fas fa-plus me-2"></i>Sertifika Ekle
+                    </button>
+                </div>
+
+                <!-- Step 5: Template -->
+                <div class="form-step" data-step="5" style="display: none;">
+                    <h5 class="card-title mb-4">
+                        <i class="fas fa-check-circle me-2"></i>Özet
+                    </h5>
+                    <!-- Özet veya inceleme bölümü buraya eklenebilir -->
+                </div>
+
+                <div class="d-flex justify-content-between mt-4">
+                    <button type="button" id="prevStep" class="btn btn-outline-secondary" style="display: none;">
+                        <i class="fas fa-chevron-left"></i> Önceki
+                    </button>
+                    <button type="button" id="nextStep" class="btn btn-outline-primary">
+                        Sonraki <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <button type="submit" id="submitForm" class="btn btn-primary" style="display: none;">
+                        <i class="fas fa-paper-plane me-2"></i>Formu Gönder
+                    </button>
+                </div>
+            </form>
+
+
+        </div>
+    </div>
+</div>
+
+<style>
+    .progress-steps {
+        position: relative;
+    }
+
+    .progress-steps::before {
+        content: '';
+        position: absolute;
+        top: 25px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: #e9ecef;
+        z-index: 1;
+    }
+
+    .step {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+    }
+
+    .step-number {
+        width: 50px;
+        height: 50px;
+        background: #fff;
+        border: 2px solid #e9ecef;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 10px;
+        font-weight: bold;
+        color: #6c757d;
+    }
+
+    .step.active .step-number {
+        background: #0d6efd;
+        border-color: #0d6efd;
+        color: #fff;
+    }
+
+    .step-title {
+        font-size: 0.9rem;
+        color: #6c757d;
+    }
+
+    .step.active .step-title {
+        color: #0d6efd;
+        font-weight: 500;
+    }
+
+    .profile-photo-container {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .profile-photo-wrapper {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .form-floating {
+        margin-bottom: 1rem;
+    }
+
+    .form-floating>.form-control {
+        height: calc(3.5rem + 2px);
+        padding: 1rem 0.75rem;
+    }
+
+    .form-floating>label {
+        padding: 1rem 0.75rem;
+    }
+
+    .card {
+        border: none;
+        border-radius: 15px;
+    }
+
+    .card-title {
+        color: #2c3e50;
+        font-weight: 600;
+    }
+
+    .btn-primary {
+        padding: 0.75rem 2rem;
+        border-radius: 8px;
+        font-weight: 500;
+    }
+
+    .btn-outline-primary {
+        border-radius: 8px;
+        font-weight: 500;
+    }
+
+    .template-card {
+        border: 1px solid #dee2e6;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .template-card:hover {
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        transform: translateY(-5px);
+    }
+
+    .template-info {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .template-info h6 {
+        margin: 0;
+        color: #2c3e50;
+    }
+
+    .template-info p {
+        margin: 5px 0 0;
+        color: #6c757d;
+        font-size: 0.9rem;
+    }
+
+    .form-check {
+        padding: 10px;
+        text-align: center;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .education-item,
+    .experience-item,
+    .certificate-item {
+        border: 1px solid #dee2e6;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .remove-item {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: #dc3545;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 5px;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+    }
+
+    .remove-item:hover {
+        color: #c82333;
+        transform: scale(1.1);
+    }
+</style>
+
+@section Scripts {
+    <script>
+        let currentStep = 1;
+        const totalSteps = 5;
+
+        function showStep(step) {
+            document.querySelectorAll('.form-step').forEach(formStep => {
+                formStep.style.display = 'none';
+            });
+            document.querySelector(`.form-step[data-step="${step}"]`).style.display = 'block';
+        }
+
+        function updateProgress(step) {
+            document.querySelectorAll('.step').forEach(stepEl => {
+                stepEl.classList.remove('active');
+                if (parseInt(stepEl.dataset.step) <= step) {
+                    stepEl.classList.add('active');
+                }
+            });
+        }
+
+        function updateNavigation(step) {
+            const prevButton = document.getElementById('prevStep');
+            const nextButton = document.getElementById('nextStep');
+            const submitButton = document.getElementById('submitForm');
+
+            prevButton.style.display = step > 1 ? 'block' : 'none';
+            nextButton.style.display = step < totalSteps ? 'block' : 'none';
+            submitButton.style.display = step === totalSteps ? 'block' : 'none';
+        }
+
+        document.getElementById('nextStep').addEventListener('click', function () {
+            if (currentStep < totalSteps) {
+                currentStep++;
+                showStep(currentStep);
+                updateProgress(currentStep);
+                updateNavigation(currentStep);
+            }
+        });
+
+        document.getElementById('prevStep').addEventListener('click', function () {
+            if (currentStep > 1) {
+                currentStep--;
+                showStep(currentStep);
+                updateProgress(currentStep);
+                updateNavigation(currentStep);
+            }
+        });
+
+        document.getElementById('fileInput').addEventListener('change', function (e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    document.getElementById('previewImage').src = e.target.result;
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
+        let educationCount = 1;
+        document.getElementById('addEducation').addEventListener('click', function () {
+            const container = document.getElementById('educationContainer');
+            const newItem = container.querySelector('.education-item').cloneNode(true);
+
+            // Silme butonu ekle
+            const removeButton = document.createElement('button');
+            removeButton.className = 'remove-item';
+            removeButton.innerHTML = '<i class="fas fa-times"></i>';
+            removeButton.onclick = function () {
+                newItem.remove();
+            };
+            newItem.appendChild(removeButton);
+
+            newItem.querySelectorAll('input, textarea').forEach(input => {
+                input.name = input.name.replace('[0]', `[${educationCount}]`);
+                input.value = '';
+            });
+
+            container.appendChild(newItem);
+            educationCount++;
+        });
+
+        let experienceCount = 1;
+        document.getElementById('addExperience').addEventListener('click', function () {
+            const container = document.getElementById('experienceContainer');
+            const newItem = container.querySelector('.experience-item').cloneNode(true);
+
+            // Silme butonu ekle
+            const removeButton = document.createElement('button');
+            removeButton.className = 'remove-item';
+            removeButton.innerHTML = '<i class="fas fa-times"></i>';
+            removeButton.onclick = function () {
+                newItem.remove();
+            };
+            newItem.appendChild(removeButton);
+
+            newItem.querySelectorAll('input').forEach(input => {
+                input.name = input.name.replace('[0]', `[${experienceCount}]`);
+                input.value = '';
+            });
+
+            container.appendChild(newItem);
+            experienceCount++;
+        });
+
+        let certificateCount = 1;
+        document.getElementById('addCertificate').addEventListener('click', function () {
+            const container = document.getElementById('certificateContainer');
+            const newItem = container.querySelector('.certificate-item').cloneNode(true);
+
+            // Silme butonu ekle
+            const removeButton = document.createElement('button');
+            removeButton.className = 'remove-item';
+            removeButton.innerHTML = '<i class="fas fa-times"></i>';
+            removeButton.onclick = function () {
+                newItem.remove();
+            };
+            newItem.appendChild(removeButton);
+
+            newItem.querySelectorAll('input, textarea').forEach(input => {
+                input.name = input.name.replace('[0]', `[${certificateCount}]`);
+                input.value = '';
+            });
+
+            container.appendChild(newItem);
+            certificateCount++;
+        });
+
+     
+    </script>
+}

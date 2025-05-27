@@ -1,0 +1,113 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?xxn58q');
+  src:  url('../fonts/icomoon.eot?xxn58q#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?xxn58q') format('truetype'),
+    url('../fonts/icomoon.woff?xxn58q') format('woff'),
+    url('../fonts/icomoon.svg?xxn58q#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="shapro-"], [class*=" shapro-"] {
+  font-family: 'icomoon';
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.shapro-cabin:before {
+  content: "\e900";
+}
+.shapro-worldwide:before {
+  content: "\e901";
+}
+.shapro-map:before {
+  content: "\e902";
+}
+.shapro-play:before {
+  content: "\e903";
+}
+.shapro-phone-call:before {
+  content: "\e904";
+}
+.shapro-envelope:before {
+  content: "\e905";
+}
+.shapro-play-button:before {
+  content: "\e906";
+}
+.shapro-website:before {
+  content: "\e907";
+}
+.shapro-startup:before {
+  content: "\e908";
+}
+.shapro-analytics:before {
+  content: "\e909";
+}
+.shapro-target:before {
+  content: "\e90a";
+}
+.shapro-monitoring:before {
+  content: "\e90b";
+}
+.shapro-lightbulb:before {
+  content: "\e90c";
+}
+.shapro-award:before {
+  content: "\e90d";
+}
+.shapro-startup-1:before {
+  content: "\e90e";
+}
+.shapro-customer:before {
+  content: "\e90f";
+}
+.shapro-business-and-finance:before {
+  content: "\e910";
+}
+.shapro-flash:before {
+  content: "\e911";
+}
+.shapro-beer:before {
+  content: "\e912";
+}
+.shapro-photo:before {
+  content: "\e913";
+}
+.shapro-inbox:before {
+  content: "\e914";
+}
+.shapro-quote:before {
+  content: "\e915";
+}
+.shapro-right:before {
+  content: "\e916";
+}
+.shapro-left-arrow:before {
+  content: "\e917";
+}
+.shapro-shooting:before {
+  content: "\e918";
+}
+.shapro-innovation:before {
+  content: "\e919";
+}
+.shapro-box:before {
+  content: "\e91a";
+}
+.shapro-telephone:before {
+  content: "\e91b";
+}
+.shapro-location-pin:before {
+  content: "\e91c";
+}
+.shapro-envelope-1:before {
+  content: "\e91d";
+}

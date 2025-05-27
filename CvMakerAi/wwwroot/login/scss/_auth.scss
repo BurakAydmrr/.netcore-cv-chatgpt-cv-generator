@@ -1,0 +1,179 @@
+//
+// Auth.scss
+//
+
+
+body{
+  background-color: $light;
+}
+
+.account-pages{
+  height: 100vh;
+  align-items: center;
+  display:flex;
+}
+
+.auth-box{
+  padding: 50px 114px;
+}
+
+.auth-contain{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 500px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+.form-floating-custom{
+  font-size: 14px;
+  .form-control{
+    border-radius: 0;
+    &:focus{
+      border-color: $success !important;
+      box-shadow: none;
+    }
+  }
+  .btn-link{
+    padding: 0.7rem 0.9rem;
+  }
+}
+
+// auth-pass-inputgroup
+
+.auth-pass-inputgroup{
+  input[type="text"] + .btn .mdi-eye-outline{
+      &:before{
+          content: "\F06D1";
+      }
+  }
+}
+
+.form-password{
+  position: relative;
+}
+
+.auth-icon{
+  position: relative;
+  >label{
+      left: 38px;
+  }
+  >.form-control, >.form-select{
+      padding-left: 48px;
+  }
+  .form-floating-icon{
+      position: absolute;
+      top: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      width: 56px;
+      color: $gray-600;
+  }
+}
+
+// Demo-1
+.form-custom{
+  label{
+    font-size: 14px;
+    font-weight: 600 !important;
+  }
+  .form-control{
+      border-radius: 30px;
+      padding: 10px 15px;
+      &::placeholder{
+        font-size: 15px !important;
+      }
+      &:focus{
+        border-color: $success;
+        box-shadow: none;
+      }
+  }
+}
+
+// demo - 2
+
+.auth-head{
+  background-image: url(../images/bg-img-3.png);
+  background-size: cover;
+  background-position:center ;
+}
+
+.bg-overlay-2 {
+  background: rgba(51, 51, 51, 0.8);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0px;
+  top: 0px;
+}
+
+// Demo-3
+.custom-form{
+  .form-control{
+    padding: 10px 15px;
+    &::placeholder{
+      font-size: 15px !important;
+    }
+    &:focus{
+      border-color: $success;
+      box-shadow: none;
+    }
+  }
+}
+
+
+// demo - 4
+
+.auths-box{
+  padding: 40px;
+}
+.custom{
+  position: relative;
+    left: -229px;
+}
+
+//
+// auth.scss
+//
+
+.authentication-box{
+  background-image: url(../images/bg-img-4.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.authen-box{
+  position: relative;
+  left: 134px;
+}
+
+.testi-contain{
+  max-width: 760px;
+}
+.auth-contents{
+  box-shadow: 0 10px 33px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 35px 30px;
+  background: $white;
+}
+.auth-carousel{
+  .carousel-indicators{
+    margin-right: 0;
+    margin-left: 0;
+    right: auto;
+    margin-bottom: -3rem;
+    button{
+      width: 12px !important;
+      height: 12px !important;
+      border-radius: 50%;
+    }
+  }
+}
+

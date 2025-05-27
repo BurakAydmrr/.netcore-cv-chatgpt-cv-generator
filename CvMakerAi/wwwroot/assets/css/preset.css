@@ -1,0 +1,656 @@
+/*
+ Theme Name: Shapro
+ Theme URI: http://themewar.com/html/shapro/
+ Author: themewar
+ Author URI: https://themeforest.net/user/themewar/portfolio
+ Description: Shapro - Multipurpose Landing Page HTML5 Responsive Templates
+ Version: 1.0
+ License:
+ License URI:
+ */
+
+/*------------------------------------------------------
+/  All Preset Css
+/------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+
+@font-face {
+    font-family: 'Futura PT';
+    src: url('../fonts/FuturaPT-Bold.woff2') format('woff2'),
+        url('../fonts/FuturaPT-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura PT Demi';
+    src: url('../fonts/FuturaPT-Demi.woff2') format('woff2'),
+        url('../fonts/FuturaPT-Demi.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura PT Book';
+    src: url('../fonts/FuturaPT-Book.woff2') format('woff2'),
+        url('../fonts/FuturaPT-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif; 
+    font-size: 18px;
+    line-height: 28px;
+    color: #4b4b4b;
+    letter-spacing: 0;
+    font-weight: 400;
+    word-break: break-word;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Jost', sans-serif;
+    color: #051133;
+    font-weight: 700;
+    letter-spacing: 0;
+    margin: 0 0 15px;
+    line-height: 1.2;
+}
+a{
+    color: #051133;
+    text-decoration: none;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+a:hover{
+    color: #051133;
+    text-decoration: none;
+}
+a:focus{
+    outline: 0;
+    text-shadow: none;
+    box-shadow: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/*---- Shapro Btn ----*/
+.shapro-btn-1{
+    display: inline-block;
+    height: 64px;
+    font-size: 16px;
+    line-height: .8;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    font-family: 'Roboto', sans-serif; 
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 50px;
+    padding: 26px 50px;
+    background-image: linear-gradient(to left, #0985f9, #0b72f8, #2f5cf3, #4d40ea, #6809dc);
+    overflow: hidden;
+    transition-delay: 0s, 0s;
+    transition-duration: 0.4s, 0.4s;
+    transition-property: border-color, color;
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    vertical-align: middle;
+    -webkit-box-shadow: 0px 1px 54px 0px rgba(47, 84, 238, 0.46);
+    -moz-box-shadow:    0px 1px 54px 0px rgba(47, 84, 238, 0.46);
+    box-shadow:         0px 1px 54px 0px rgba(47, 84, 238, 0.46);
+}
+.shapro-btn-1 span{
+    position: relative;
+    z-index: 2;
+}
+.shapro-btn-1:after{
+    background-image: linear-gradient(to right, #0985f9, #0b72f8, #2f5cf3, #4d40ea, #6809dc);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: rotate3d(0, 0, 1, -45deg) translate3d(0px, -3em, 0px);
+    transform-origin: 0 100% 0;
+    transition: transform 0.4s ease 0s, opacity 0.4s ease 0s, background-color 0.4s ease 0s;
+    width: 150%;
+    z-index: -1;
+    border-radius: 50px;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.shapro-btn-1:hover{
+    color: #fff;
+}
+.shapro-btn-1:hover:after {
+    opacity: 1;
+    transform: rotate3d(0, 0, 1, 0deg);
+    transition-timing-function: cubic-bezier(0.3, 1, 0.3, 1);
+}
+.shapro-btn-2{
+    display: inline-block;
+    height: 66px;
+    font-size: 17px;
+    line-height: .8;
+    color: #fff;
+    background: #212933;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    font-family: 'Jost', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 100px;
+    padding: 26px 42px;
+    transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -webkit-transition: all 0.4s ease-out;
+    -ms-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+}
+.shapro-btn-2 span {
+    position: relative;
+    z-index: 2;
+}
+.shapro-btn-2::after {
+    content: "";
+    width: 0;
+    height: 100%;
+    border-radius: 100px;
+    position: absolute;
+    left: auto;
+    right: 0;
+    top: 0;
+    background: #2c9c4c;
+    transition: width .6s cubic-bezier(.25,.8,.25,1) 0s;
+}
+.shapro-btn-2:hover:after {
+    width: 100%;
+    left: 0;
+    right: auto;
+}
+.shapro-btn-2:hover{
+    color: #fff;
+}
+.shapro-btn-3{
+    display: inline-block;
+    height: 55px;
+    font-size: 16px;
+    line-height: .8;
+    color: #fff;
+    background-image: linear-gradient(to right, #eb3252, #ef2f49, #f32c3f, #f62b34, #f82c28);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    font-family: 'Jost', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 3px;
+    padding: 22px 40px;
+    transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -webkit-transition: all 0.4s ease-out;
+    -ms-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+}
+.shapro-btn-3 span {
+    position: relative;
+    z-index: 2;
+}
+.shapro-btn-3:hover {
+    color: #fff;
+    -webkit-box-shadow: 0px 10px 30px 0px rgba(242, 47, 58, 0.5);
+    -moz-box-shadow:    0px 10px 30px 0px rgba(242, 47, 58, 0.5);
+    box-shadow:         0px 10px 30px 0px rgba(242, 47, 58, 0.5);
+}
+.shapro-btn-4{
+    display: inline-block;
+    height: 55px;
+    font-size: 16px;
+    line-height: .8;
+    color: #fff;
+    background: #0aadeb;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    font-family: 'Jost', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 3px;
+    padding: 22px 41px;
+    transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -webkit-transition: all 0.4s ease-out;
+    -ms-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+}
+.shapro-btn-4:after{
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 3px;
+    height: 0;
+    content: '';
+    background: #ff5f63;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+    -webkit-transition-duration: .4s;
+    transition-duration: .4s;
+    -webkit-transition-property: all;
+    transition-property: all;
+}
+.shapro-btn-4 span {
+    position: relative;
+    display: block;
+    z-index: 2;
+}
+.shapro-btn-4:hover {
+    color: #fff;
+}
+.shapro-btn-4:hover span{
+    -webkit-animation-name: tw_btn_effect;
+    animation-name: tw_btn_effect;
+    -webkit-animation-duration: .4s;
+    animation-duration: .4s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+.shapro-btn-4:hover::after{
+    height: 100%;
+}
+.shapro-btn-5{
+    display: inline-block;
+    height: 65px;
+    font-size: 16px;
+    line-height: .8;
+    color: #fff;
+    background-image: linear-gradient(to left, #8025ff, #8b41f7, #9456ef, #9c68e7, #a379de);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    font-family: 'Jost', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 50px;
+    padding: 26px 45px;
+    transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -webkit-transition: all 0.4s ease-out;
+    -ms-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+}
+.shapro-btn-5:after{
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 50px;
+    visibility: hidden;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    content: '';
+    background-image: linear-gradient(to right, #8025ff, #8b41f7, #9456ef, #9c68e7, #a379de);
+    transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+}
+.shapro-btn-5 span {
+    position: relative;
+    display: block;
+    z-index: 2;
+}
+.shapro-btn-5:hover:after{
+    visibility: visible;
+    opacity: 1;
+}
+.shapro-btn-5:hover {
+    color: #fff;
+}
+@-webkit-keyframes tw_btn_effect {
+    49% {
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0)
+    }
+    50% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+        opacity: 0
+    }
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+.get-all{
+    font-size: 14px;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #0b72f8;
+    line-height: 20px;
+    font-weight: 600;
+    font-family: 'Jost', sans-serif;
+    text-shadow: 1px 0px 54px rgba(47, 84, 238, 0.46);
+    margin: 0 0 33px;
+}
+.get-all:after {
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    width: 100%;
+    height: 1px;
+    content: '';
+    transition: width .6s cubic-bezier(.25,.8,.25,1) 0s;
+    background: #0b72f8;
+}
+.get-all:hover:after {
+    width: 0%;
+    left: auto;
+    right: 0;
+}
+.get-all:hover{
+    color: #0b72f8
+}
+/*---- Shapro Section Title ----*/
+.sub-title{
+    font-size: 20px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to left, #0985f9, #0b72f8, #2f5cf3, #4d40ea, #6809dc);
+    line-height: 28px;
+    font-weight: 400;
+    display: inline-block;
+    font-family: 'Jost', sans-serif;
+    text-shadow: 1px 0px 54px rgba(47, 84, 238, 0.46);
+    margin: 0 0 8px;
+}
+.sbtc{
+   background-image: linear-gradient(to left, #0b72f8, #0b72f8, #0b72f8, #0b72f8, #0b72f8); 
+}
+.sub-color-2{
+    text-shadow: none;
+    color: #2c9c4c;
+    -webkit-text-fill-color: inherit;
+    background: transparent;
+}
+.sub-color-3{
+    text-shadow: none;
+    color: #ff5f63;
+    -webkit-text-fill-color: inherit;
+    background: transparent;
+}
+.sub-color-4{
+    text-shadow: none;
+    background-image: linear-gradient(to left, #8025ff, #8b41f7, #9456ef, #9c68e7, #a379de);
+}
+.sec-title{
+    font-size: 57px;
+    line-height: 60px;
+    letter-spacing: -1.14px;
+    margin-bottom: 40px;
+}
+.sec-title-2{
+    font-size: 60px;
+    color: #263238;
+    line-height: 75px;
+    letter-spacing: -1.2px;
+    margin: 0 0 47px;
+}
+.sec-desc{
+    margin: 0 0 50px;
+}
+.notes{
+    font-size: 15px;
+    line-height: 27px;
+    color: #333333;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    margin: 0;
+}
+.notes span{
+    font-weight: 600;
+}
+.notes a{
+    color: inherit;
+    position: relative;
+    display: inline-block;
+}
+.notes a:after {
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    width: 100%;
+    height: 1px;
+    content: '';
+    transition: width .6s cubic-bezier(.25,.8,.25,1) 0s;
+    background: #656565;
+}
+.notes a:hover:after {
+    width: 0%;
+    left: auto;
+    right: 0;
+}
+.notes a:hover{
+    transition: all 0.3s cubic-bezier(0, 0, 0.23, 1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to left, #0985f9, #0b72f8, #2f5cf3, #4d40ea, #6809dc);
+}
+/*--- Video Btn ----*/
+.video-btn-2{
+    width: 117px;
+    height: 117px;
+    border: 3px solid transparent;
+    position: relative;
+    animation: waveBtn 2.5s infinite;
+    display: inline-block;
+    border-radius: 100px;
+    background-image: linear-gradient(#111214, #111214), linear-gradient(to left, #0985f9, #0b72f8, #2f5cf3, #4d40ea, #6809dc);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    margin-bottom: 32px;
+}
+.video-btn-2 i{
+    height: 88px;
+    width: 88px;
+    background: rgba(255, 255, 255, .25);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 88px;
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    letter-spacing: -6px;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.video-btn-2 i:after {
+    width: 0%;
+    height: 0%;
+    background-image: linear-gradient(to right, #0985f9, #0b72f8, #2f5cf3, #4d40ea, #6809dc);
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -1;
+    content: '';
+    border-radius: 50%;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.video-btn-2:hover i:after {
+    width: 100%;
+    height: 100%;
+}
+.video-btn-3{
+    color: #fff;
+    font-size: 100px;
+    line-height: 100px;
+    display: inline-block;
+}
+.video-btn-3:hover{
+    color: #2c9c4c;
+}
+.video-btn-4{
+    height: 73px;
+    background: #92e3a9;
+    border-radius: 50px;
+    text-align: center;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 76px;
+    color: #111111;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0 96px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin-bottom: 25px;
+}
+.video-btn-4 i{
+    display: inline-block;
+    font-size: 40px;
+    position: relative;
+    top: 10px;
+    margin-left: 10px;
+}
+.video-btn-4::after {
+    content: "";
+    width: 0;
+    height: 100%;
+    border-radius: 100px;
+    position: absolute;
+    left: auto;
+    z-index: -1;
+    right: 0;
+    top: 0;
+    background: #212933;
+    transition: width .6s cubic-bezier(.25,.8,.25,1) 0s;
+}
+.video-btn-4:hover:after {
+    width: 100%;
+    left: 0;
+    right: auto;
+}
+.video-btn-4:hover{
+    color: #fff;
+}
+
+@keyframes blinker {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.1, 1.1);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+@keyframes halfBounce {
+    0%,
+    100% {
+        transform: scale(.5)
+    }
+    50% {
+        transform: scale(1)
+    }
+}
+@keyframes halfBounce2 {
+    0%,
+    100% {
+        transform: scale(.9)
+    }
+    50% {
+        transform: scale(1)
+    }
+}
+@-webkit-keyframes rotated {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes waveBtn {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, .3)
+    }
+    50% {
+        box-shadow: 0 0 0 40px transparent
+    }
+    100% {
+        box-shadow: 0 0 0 0 transparent
+    }
+}
+@keyframes movebounce {
+    0% {
+        transform: translateY(0px); }
+    50% {
+        transform: translateY(12px); }
+    100% {
+        transform: translateY(0px); }
+}
+/*---- Shapro Section Padding ----*/
+.noPadding{
+    padding: 0;
+}
+.noPaddingLeft{
+    padding-left: 0;
+}
+.noPaddingRight{
+    padding-right: 0;
+}
+.noPaddingTop{
+    padding-top: 0;
+}
+.m-bottom-51{
+    margin-bottom: 51px;
+}
+.m-top-345{
+    margin-top: -345px;
+}

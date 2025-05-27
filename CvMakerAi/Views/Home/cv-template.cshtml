@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.4;
+            color: #333;
+        }
+
+        h1, h2 {
+            color: #2c3e50;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1>@ViewBag.Isim @ViewBag.Soyisim</h1>
+    <p><span class="label">E-posta:</span> @ViewBag.Email</p>
+    <p><span class="label">Telefon:</span> @ViewBag.Telefon</p>
+    <p><span class="label">Şehir:</span> @ViewBag.Sehir</p>
+    <p><span class="label">Adres:</span> @ViewBag.Adres</p>
+    <p><span class="label">Cinsiyet:</span> @ViewBag.Cinsiyet</p>
+    <p><span class="label">Doğum Tarihi:</span> @ViewBag.DogumTarihi</p>
+    <p><span class="label">Hakkında:</span> @ViewBag.Aciklama</p>
+
+    <div class="section">
+        <h2>Eğitim</h2>
+        <p>@ViewBag.OkulAdi - @ViewBag.Derece (@ViewBag.SehirEgitim)</p>
+        <p>Dönem: @ViewBag.Baslangic - @ViewBag.Bitis</p>
+        <p>@ViewBag.AciklamaEgitim</p>
+    </div>
+
+    <div class="section">
+        <h2>Deneyim</h2>
+        <p>@ViewBag.Sirket - @ViewBag.Pozisyon</p>
+        <p>Süre: @ViewBag.Sure</p>
+        <p>@ViewBag.IsAciklama</p>
+    </div>
+
+    <div class="section">
+        <h2>Sertifikalar</h2>
+        <p>@ViewBag.SertifikaAdi - @ViewBag.SertifikaKurum</p>
+        <p>@ViewBag.AciklamaSertifika</p>
+    </div>
+</body>
+</html>

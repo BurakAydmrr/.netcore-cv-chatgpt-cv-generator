@@ -1,0 +1,143 @@
+<!-- Main Header Start -->
+<!-- Preloader Start -->
+@* <div class="preloader">
+        <div class='circle'>
+            <div class="circle-cutter"></div>
+            <div class="circle-inner"></div>
+        </div> *@
+</div>
+<!-- Preloader End -->
+@{
+    var userInfo = ViewBag.UserInfo;
+    var currentUrl = Context.Request.Path.Value;
+}
+
+
+@if (string.IsNullOrEmpty(currentUrl) || currentUrl == "/")
+{
+    <header class="header-03">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="logo-1">
+                        <a href="/"><img src="/images/1logo.png" alt="Logo"></a>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <nav class="menu_1">
+                        <div class="menuButton">
+                            <a href="#"><i class="fal fa-bars"></i></a>
+                        </div>
+                        <ul>
+                            <li class="menu-item-has-children">
+                                <a href="/">Anasayfa</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="/Index#ozellikler">Özellikler</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#neden">Neden Yapay Zeka?</a>
+                            </li>
+
+                            @if (userInfo != null)
+                            {
+                                <li class="menu-item-has-children">
+                                    <a href="/HesapBilgilerim">Hesap Bilgilerim</a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="menu-item-has-children">
+                                    <a href="/GirisYap">Giriş Yap</a>
+                                </li>
+                            }
+                        </ul>
+                        @if (userInfo != null)
+                        {
+                            <div class="access_btns">
+                                <a class="shapro-btn-3" href="/CvOlustur"><span>CV Oluştur</span></a>
+                            </div>
+                        }
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+}
+else
+{
+    <!-- Header Topbar Start -->
+    <section class="topbar-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- You can add content here if needed -->
+                </div>
+                <div class="col-md-6">
+                    <div class="topbar-right">
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                            <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        </ul>
+                        <a href="contact.html" class="shapro-btn-1"><span>CV Oluştur</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Header Topbar End -->
+
+    <!-- Main Header Start -->
+    <header class="header-01">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="logo-1">
+                        <a href="/"><img src="/images/1logo.png" alt="Logo"></a>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <nav class="menu_1">
+                        <div class="menuButton">
+                            <a href="#"><i class="fal fa-bars"></i></a>
+                        </div>
+                        <ul>
+                            <li class="menu-item-has-children">
+                                <a href="#">Anasayfa</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#ozellikler">Özellikler</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#neden">Neden Yapay Zeka?</a>
+                            </li>
+                            @if (userInfo != null)
+                            {
+                                <li class="menu-item-has-children">
+                                    <a href="#">Hesap Bilgilerim</a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="menu-item-has-children">
+                                    <a href="/GirisYap">Giriş Yap</a>
+                                </li>
+                            }
+                        </ul>
+                        <div class="access_btns">
+                            <!-- You can add buttons here if needed -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="h-border"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Main Header End -->
+}
+<!-- Main Header End -->
